@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using interop.CimBaseAPI;
 using System.Windows.Forms;
 using System.Diagnostics;
+using ApiShell;
 
 
 namespace ClassLibrary1
@@ -29,32 +30,27 @@ namespace ClassLibrary1
         public void Execute()
 
         {
-            //Define an Cimatron Provider object
+            ////Define an Cimatron Provider object
             interop.CimServicesAPI.CimApplicationProvider AppProvider = new interop.CimServicesAPI.CimApplicationProvider();
             //Get Application object from AppProvider object.
             interop.CimatronE.IApplication CimApp = (interop.CimatronE.IApplication)AppProvider.GetApplication();
-            interop.CimatronE.IPdm aPdm = CimApp.GetPdm();
+            //interop.CimatronE.IPdm aPdm = CimApp.GetPdm();
 
-            interop.CimatronE.ICimDocument aDocument = CimApp.GetActiveDoc();
-            interop.CimMdlrAPI.IModelContainer aContainer = (interop.CimMdlrAPI.IModelContainer)aDocument;
-            interop.CimBaseAPI.IModel aTmpModel = (interop.CimBaseAPI.IModel)aContainer.Model;
-            interop.CimBaseAPI.ISetsFactory aSetFac = aTmpModel.GetSetsFactory();
+            //interop.CimatronE.ICimDocument aDocument = CimApp.GetActiveDoc();
+            //interop.CimMdlrAPI.IModelContainer aContainer = (interop.CimMdlrAPI.IModelContainer)aDocument;
+            //interop.CimBaseAPI.IModel aTmpModel = (interop.CimBaseAPI.IModel)aContainer.Model;
+            //interop.CimBaseAPI.ISetsFactory aSetFac = aTmpModel.GetSetsFactory();
+            DM apiShellDm = new DM(CimApp);
+            string ApiShellString =  apiShellDm.GetActvDocTitle();
+            MessageBox.Show(ApiShellString);
              //aSetFac.CreateSet("Part", (interop.CimMdlrAPI.EFilterEnumType)0);
 
-            if (aDocument != null)
-            {
-                if (aDocument.Type == interop.CimatronE.DocumentEnumType.cmAssembly)
-                {
-                    object aSetsOfDoc = aDocument.SetsOfDoc;
-                    string[] aList = (string[])aSetsOfDoc;
-
-                }
-            }
+            
 
 
             //Debug.WriteLine("plz");
 
-            //Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
 
@@ -69,7 +65,7 @@ namespace ClassLibrary1
 
         {
 
-            return "OpenForm";
+            return "GetDocString";
 
         }
 
@@ -79,7 +75,7 @@ namespace ClassLibrary1
 
         {
 
-            return "OpenForm";
+            return "GetDocString";
 
         }
 
@@ -89,7 +85,7 @@ namespace ClassLibrary1
 
         {
 
-            return "this" + "\n" + "groupname";
+            return "test" + "\n" + "stes";
 
         }
 
@@ -129,7 +125,7 @@ namespace ClassLibrary1
 
         {
 
-            return "My Command Descriptiasdfon";
+            return "My Command is garbage";
 
         }
 

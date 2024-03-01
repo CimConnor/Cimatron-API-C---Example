@@ -52,6 +52,9 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ApiShell">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Cimatron\Cimatron\2024.0\Program\ApiShell.dll</HintPath>
+    </Reference>
     <Reference Include="CimUIInfrastructure">
       <HintPath>..\..\..\..\..\..\..\Program Files\Cimatron\Cimatron\2024.0\Program\CimUIInfrastructure.dll</HintPath>
     </Reference>

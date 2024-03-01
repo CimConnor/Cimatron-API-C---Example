@@ -17,3 +17,4 @@ C:\Users\connor.devries\OneDrive - CAMBRIO\Documents\GitHub\Cimatron-API-C---Exa
 C:\Users\connor.devries\OneDrive - CAMBRIO\Documents\GitHub\Cimatron-API-C---Example\ClassLibrary1\obj\x64\Debug\ClassLibrary1.csproj.CopyComplete
 C:\Users\connor.devries\OneDrive - CAMBRIO\Documents\GitHub\Cimatron-API-C---Example\ClassLibrary1\obj\x64\Debug\ClassLibrary1.dll
 C:\Users\connor.devries\OneDrive - CAMBRIO\Documents\GitHub\Cimatron-API-C---Example\ClassLibrary1\obj\x64\Debug\ClassLibrary1.pdb
+C:\Users\connor.devries\OneDrive - CAMBRIO\Documents\GitHub\Cimatron-API-C---Example\ClassLibrary1\bin\x64\Debug\ApiShell.dll
